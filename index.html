@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Shipping System</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="login-container">
+    <h2>Login</h2>
+    <input type="text" id="username" placeholder="Username" />
+    <input type="password" id="password" placeholder="Password" />
+    <button onclick="login()">Login</button>
+  </div>
+
+  <div id="main-container" style="display:none;">
+    <button onclick="logout()">Logout</button>
+    <h1>Shipping System</h1>
+    <form id="shipping-form">
+      <input type="text" id="customer-name" placeholder="Customer Name" required />
+      <input type="text" id="address" placeholder="Address" required />
+      <input type="text" id="city" placeholder="City" required />
+      <input type="text" id="tracking-number" placeholder="Tracking Number" required />
+      <input type="text" id="shipping-company" placeholder="Shipping Company" required />
+      <button type="submit">Add Shipment</button>
+    </form>
+
+    <input type="text" id="search-box" placeholder="Search..." />
+    <select id="filter-company"><option value="">All Companies</option></select>
+    <button id="export-btn">Export CSV</button>
+    <button id="print-btn">Print</button>
+
+    <table id="shipment-table">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Address</th>
+          <th>City</th>
+          <th>Tracking</th>
+          <th>Company</th>
+          <th>Date</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+  </html>
